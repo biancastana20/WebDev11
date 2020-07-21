@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+    <style>
+        p#shadow{
+            /* 1 -text-shadow */
+            text-shadow: 4px 2px 7px red;
+        }
+        p#align{
+            /* 2 - text align */
+            text-align: center;
+        }
+        /* 3 - word-break */
+        #word-break{
+            width: 50px; 
+            border:1px solid red;
+        }
+        #word-break > p{
+            /* word-break: break-all; */
+            /* overflow-wrap: break-word; */
+            text-overflow: ellipsis;
+        }
+        /* Use w3schools for more */
+    </style>
+</head>
+<body>
+    <div>
+        <p id="shadow">Lorem, ipsum dolor.</p>
+        <p id="align">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima enim delectus voluptas, id vero libero excepturi dignissimos quod neque architecto ab. Ipsum pariatur vitae doloremque nihil facere ad officia, asperiores deserunt molestiae eum veniam dolorum laudantium placeat neque minus temporibus.lorem40 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tempore esse quaerat similique adipisci dolor eos soluta ratione iure ut placeat nulla sit accusantium numquam delectus reiciendis animi, incidunt nemo quo quos libero ducimus odio! Aliquid nemo velit voluptas quasi?</p>
+    </div>
+
+    <div id="word-break">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae ratione placeat eum eligendi quos repudiandae unde quod, totam animi magnam sint adipisci ducimus numquam aut quisquam modi rem ipsum atque, dolor incidunt eos quo. Illum dicta autem beatae? Reiciendis, minima?</p>
+    </div>
+</body>
+</html>
