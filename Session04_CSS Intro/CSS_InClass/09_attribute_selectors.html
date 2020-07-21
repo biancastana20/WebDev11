@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>More Selectors</title>
+    <style>
+      /* Target attribute */
+      a[target] {
+        background: #ddd;
+      }
+
+      a[target=] {
+        background: #ddd;
+      }
+
+      /* Target specific attribute value */
+      input[type='text'],
+      input[type='email'] {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <a href="http://scoalainformala.ro">Scoala Informala</a> 
+    <a href="http://w3schools.com" target="_self">w3Schools</a>
+    <a href="http://google.com" target="_blank">Google</a>
+
+    <form>
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <input type="submit" value="Submit" />
+    </form>
+
+
+    <br /><br />
+  </body>
+</html>
