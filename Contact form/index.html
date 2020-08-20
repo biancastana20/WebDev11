@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/bc5191bd1b.js"></script>
+    
+</head>
+<body>
+    
+    <div class="container">
+        <h1> Contact form: </h1>
+        <div class="hidebanner">
+            <i class="fas fa-check-circle"></i> 
+            <p id="addfname"></p>
+            <i class="fas fa-times"></i>
+        </div>
+       
+        <div class="formimg">
+            <form method="POST" id="myForm"> 
+                <!-- div that contain the first part of the form - left part (name, email and subject) -->
+                      <label for="fname"></label><br>
+                      <input type="text" id="fname" name="firstname" placeholder="First name" onblur="blurEvent('fname')">
+                    <br><br>
+                      <label for="lname"></label><br>
+                      <input type="text" id="lname" name="lastname" placeholder="Last name" onblur="blurEvent('lname')">
+                    <br><br>
+
+                    <p> Gender:</p>
+                    <input type="radio" id="male" name="gender" value="male" onfocus="focusRadio()">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female" onfocus="focusRadio()">
+                    <label for="female">Female</label>
+                    <p id="gendererror"></p>
+                    <textarea id ="textare" name="message" rows="10" cols="30" placeholder="Your message here..."></textarea>
+                    <br><br>
+                    <button type="button" id ="btn1">Submit</button>
+                   
+            </form>
+            <div>
+                <img src="images/download.jfif">
+            </div>
+        </div>
+       
+    </div>
+    <script src="app.js"></script> 
+</body>
+</html>
