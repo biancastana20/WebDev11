@@ -43,7 +43,7 @@ function strikethrough (){
                rIndex= this.rowIndex;
                //console.log(rIndex)
                //get the cell from selected rInde
-               table.rows[rIndex].cells[0].classList.add("stroke")
+               table.rows[rIndex].cells[0].classList.toggle("stroke")
             };   
      }
     }
