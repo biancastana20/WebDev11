@@ -11,22 +11,22 @@ var button = document.getElementById("btn1")
 button.addEventListener('click', myFunction)
 
 
-// onblur = "blurEvent('fname')"
+// onblur = "blurEvent('fname')
+          // <=>
 // var el = document.getElementById('fname')
 // el.addEventListener('onblur', blurEvent('fname'))
 // onblur = "blurEvent('lname')"
 // var el = document.getElementById('lname')
 // el.addEventListener('onblur', blurEvent('lname'))
-//
+
+//abordare generala pt ambele inp
 function blurEvent(elementId) {
     var el = document.getElementById(elementId)
     if (el.value) {
         el.classList.remove('red')
-        el.classList.add('black')
     }
 }
 function focusRadio() {
-    // var gender = document.getElementsByName("gender")
     if (gender[0].value || gender[1].value) {
         gendererror.innerHTML = ''
     }
@@ -34,8 +34,7 @@ function focusRadio() {
 
 function myFunction() {
     
-    
-    //to keep in red all the field aren't completed add a var that check 
+      //to  red all the field aren't completed if user submitted  (ii spun variabilei valid ca in pct asta formul e valid (el fiind gol) apoi el verifica daca fname e gol )
     var valid = true;
 
     if (fname.value == "") {
@@ -89,7 +88,7 @@ function myFunction() {
         return;
     }
 }
-
+ //validation for gender
     // var gender = document.getElementsByName('gender');
     // var gender_value;
     // for(var i = 0; i < gender.length; i++){
