@@ -16,7 +16,7 @@ h1{
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
-    background-color: rgb(207, 175, 175);
+    background-color: rgb(226, 212, 212);
     opacity: 0.8;
     width: 1200px;
     margin: 30px auto;
@@ -58,7 +58,7 @@ input[type=text] {
 
 .table{
     visibility: hidden;
-     margin-bottom: 30px;
+    margin-bottom: 30px;
    
 }
 
