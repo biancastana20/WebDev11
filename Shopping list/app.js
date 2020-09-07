@@ -26,7 +26,7 @@ function addItem () {
     var cell2 = row.insertCell(1);
     //add value to cells
     cell1.innerHTML = input.value;
-    cell2.innerHTML = '<button class ="buttonMarkAsBuyed">Mark as buyed</button>'
+    cell2.innerHTML = '<button class ="buttonMarkAsBuyed">Mark as buyed/unbuyed</button>'
     
     cell2.addEventListener('click', strikethrough)
     var hiddenPart = document.getElementById("myTable")
