@@ -6,7 +6,7 @@
 
 body{
     background-color: rgb(192, 159, 223);
-    background:url(https://images.unsplash.com/photo-1463490093487-b0ffe9b8e140?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fd7561cb19fe69d1809ff2df9b7ddf39&auto=format&fit=crop&w=1350&q=80) center center;
+    background-image: url("images/list6.jpg");
 }
 
 .container{
@@ -15,12 +15,11 @@ body{
     align-items: center;
     border-radius: 20px;
     background-color: white;
-    opacity: 20px;
-    width: 1500px;
-    height: 700px;
-    margin-top: 20px;
-    margin: auto;
+    opacity: 0.8;
+    width: 1200px;
+    margin: 30px auto;
     font-size:20px;
+    margin-bottom: 20px;
 } 
 
 #buttonAdd{
@@ -34,17 +33,18 @@ body{
 }
 
 .buttonAdd:hover {
-    background-color: blue;
+    background-color:blue;
 }
 
 input[type=text] {
     padding: 10px;
     margin: 10px;
+    font-size:15px;
   }
 
 [class*="buttonSort"]{
     background-color: rgb(192, 159, 223);
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 4px;
     border: none;
     cursor: pointer;
