@@ -1,9 +1,11 @@
 body{
   background-image:url('images/contact2.jpg');
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h1{
   font-size: 50px;
+ 
 }
 .container{
     /* border: 2px solid #ccc; */
@@ -12,18 +14,18 @@ h1{
   margin: auto; 
   padding: 10px;
   font-size: 17px;
-  font-family: Arial, Helvetica, sans-serif;  
-  font-size: 15px;
+  
 }
 .hidebanner{
   visibility: hidden; 
   display: flex; 
+  justify-content: space-between;
   align-items: center;
-  height: 45px;
-  border: 2px solid #bad4ba;
-  background-color:#d5e4d5 ;
-  color:green;
+  border: 2px solid #d4baca;
+  background-color:#6de76d ;
+  color:rgb(26, 112, 26);
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 .addfname{
    flex:1;
@@ -42,15 +44,13 @@ h1{
 input[type=text], textarea {
     width: 350px;
     padding: 10px; 
-    /* border: 1px solid black;  */
-    /* outline:none; */
-    font-family: Arial, Helvetica, sans-serif; 
     box-shadow: 5px 10px #888888;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 input[type=radio]{   
     margin-left:30px;
-   
 }
 
 button {
@@ -58,22 +58,25 @@ button {
     left:300px ;
     color: #ffffff;
     padding: 5px 10px;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     background-color:gray;
     
-   }
+    
+}
    
 button:hover {
-    background-color: #331eb9;
+  background-color:rgb(71, 70, 70);
   } 
 img {
    height: 450px;    
    width:500px;
+   border-radius: 20px;
+   opacity: 0.7;
   }
   /* class for changing the backgr button onsubmit */
   .blue {
-    background:#09094b;
+    background:#2f2f703b;
   }
   .black {
     border-color: black
