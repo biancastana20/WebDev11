@@ -1,10 +1,10 @@
 // get elements from document
 const button = document.getElementById("buttonAddContact");
-button.addEventListener("click", addContact);
 const name = document.getElementById("name");
 const phone = document.getElementById("phone");
 const table = document.getElementById("myTable");
 
+button.addEventListener("click", addContact);
 
 function addContact() {
   //add row to initial table
@@ -39,7 +39,7 @@ function selectRowToInput() { //search index of row and put it in inputs
   button.addEventListener("click", editContact);
   button.removeEventListener("click", addContact);
 
-  function editContact(x) {
+  function editContact() {
     table.rows[rIndex].cells[0].innerHTML = name.value;
     table.rows[rIndex].cells[1].innerHTML = phone.value;
     document.querySelector(".form-inline").reset();
