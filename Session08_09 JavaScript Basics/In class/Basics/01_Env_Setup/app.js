@@ -1,1 +1,0 @@
-alert("Salut JS din app.js!");
