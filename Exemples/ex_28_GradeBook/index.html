@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catalog de note</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div id="lista_elevi_wrapper">
+                <h1>Catalog de note</h1>
+                <div id="form">
+                    <input type="text" id="text" placeholder="Adauga noul student" autocomplete="off">
+                    <button id="addElev">Adauga</button>
+                </div>
+                <div id="sortare">
+                    <button id="sortCresc">Sortare crescatoare</button>
+                    <button id="sortDescresc">Sortare descrescatoare</button>
+                </div>
+                <!-- tabelul este hidden din css pana la apasarea "adauga" -->
+                <table id="myTable">
+                    <tr>
+                        <th id="th1">Nume</th>
+                        <th id="th2">Medie note</th>
+                        <th id="th3">Note student</th>
+                        <th id="th4">Sterge student</th>
+                    </tr>
+                </table>
+            </div>
+            <!-- urmatorul div este hidden din css pana la apasarea butonului "vezi/adauga note" -->
+            <div id="note_elev_wrapper">
+                <button id="ascundeNote">Ascunde notele</button>
+                <p>Note student: <span id="studentSelectat"></span></p>
+                <div id="notaNoua">
+                    <input type="number" id="nota" placeholder="Introduceti nota" autocomplete="off">
+                    <button id="addNota">Adauga nota studentului</button>
+                </div>
+                <div id="sortare">
+                    <button id="sortCrescNota">Sortare crescatoare</button>
+                    <button id="sortDescrescNota">Sortare descrescatoare</button>
+                </div>
+                <table id="tableNote">
+                    <tr>
+                        <th id="th5">Note</th>
+                        <th id="th6">X</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

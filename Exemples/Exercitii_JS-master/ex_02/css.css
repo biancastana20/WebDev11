@@ -1,0 +1,48 @@
+p
+{
+    width: 330px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h1
+{
+    text-align: center;
+    width: 350px;
+    font-style: italic;
+    color: red;
+}
+
+#exemplul1
+{
+    background-color: darkcyan;
+    padding: 20px;
+    border: 3px solid orange;
+    width: 260px;
+    margin-left: 15px;
+}
+
+#exemplul2
+{
+    background-color: darkgray;
+    padding: 20px;
+    border: 3px solid orange;
+    width: 260px;
+    margin-left: 15px;
+}
+
+#exemplul3
+{
+    background-color: darkkhaki;
+    padding: 20px;
+    border: 3px solid orange;
+    width: 260px;
+    margin-left: 15px;
+}
+
+label
+{
+    width: 40px;
+    display: inline-block;
+}
+

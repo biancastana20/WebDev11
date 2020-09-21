@@ -1,0 +1,188 @@
+Suma de la 1 la n
+
+let total = 0, count = 1;
+while (count <= 10) {
+total += count;
+count += 1;
+}
+console.log(total);
+// → 55
+
+console.log(sum(range(1, 10)));
+// → 55
+
+
+Factorial
+
+function factorial(n) {
+if (n == 0) {
+return 1;
+} else {
+return factorial(n - 1) * n;
+}
+}
+
+
+let theNumber = Number(prompt("Pick a number"));
+console.log("Your number is the square root of " +
+theNumber * theNumber);
+
+let theNumber = Number(prompt("Pick a number"));
+if (!Number.isNaN(theNumber)) {
+console.log("Your number is the square root of " +
+theNumber * theNumber);
+}
+
+let theNumber = Number(prompt("Pick a number"));
+if (!Number.isNaN(theNumber)) {
+console.log("Your number is the square root of " +
+theNumber * theNumber);
+} else {
+console.log("Hey. Why didn't you give me a number?");
+}
+
+
+let num = Number(prompt("Pick a number"));
+if (num < 10) {
+console.log("Small");
+} else if (num < 100) {
+console.log("Medium");
+} else {
+console.log("Large");
+}
+
+
+let number = 0;
+while (number <= 12) {
+console.log(number);
+number = number + 2;
+}
+// → 0
+// → 2
+// … etcetera
+
+
+
+2 la puterea n
+
+let result = 1;
+let counter = 0;
+while (counter < 10) {
+result = result * 2;
+counter = counter + 1;
+}
+console.log(result);
+// → 1024
+
+
+let yourName;
+do {
+yourName = prompt("Who are you?");
+} while (!yourName);
+console.log(yourName);
+
+
+for (let number = 0; number <= 12; number = number + 2) {
+console.log(number);
+}
+// → 0
+// → 2
+// … etcetera
+
+
+let result = 1;
+for (let counter = 0; counter < 10; counter = counter + 1) {
+result = result * 2;
+}
+console.log(result);
+// → 1024
+
+
+
+switch (prompt("What is the weather like?")) {
+case "rainy":
+console.log("Remember to bring an umbrella.");
+break;
+case "sunny":
+console.log("Dress lightly.");
+case "cloudy":
+console.log("Go outside.");
+break;
+default:
+console.log("Unknown weather type!");
+break;
+}
+
+pag 37 exercitii
+
+
+const square = function(x) {
+return x * x;
+};
+console.log(square(12));
+// → 144
+
+
+const makeNoise = function() {
+console.log("Pling!");
+};
+makeNoise();
+// → Pling!
+const power = function(base, exponent) {
+let result = 1;
+for (let count = 0; count < exponent; count++) {
+result *= base;
+}
+return result;
+};
+console.log(power(2, 10));
+// → 1024
+
+
+
+let x = 10;
+if (true) {
+let y = 20;
+var z = 30;
+console.log(x + y + z);
+// → 60
+}
+// y is not visible here
+console.log(x + z);
+// → 40
+
+
+
+const halve = function(n) {
+return n / 2;
+};
+let n = 10;
+console.log(halve(100));
+// → 50
+console.log(n);
+// → 10
+
+
+
+
+const hummus = function(factor) {
+const ingredient = function(amount, unit, name) {
+let ingredientAmount = amount * factor;
+if (ingredientAmount > 1) {
+unit += "s";
+}
+console.log(`${ingredientAmount} ${unit} ${name}`);
+};
+ingredient(1, "can", "chickpeas");
+ingredient(0.25, "cup", "tahini");
+ingredient(0.25, "cup", "lemon juice");
+ingredient(1, "clove", "garlic");
+ingredient(2, "tablespoon", "olive oil");
+ingredient(0.5, "teaspoon", "cumin");
+};
+
+
+
+page 43..
+
+

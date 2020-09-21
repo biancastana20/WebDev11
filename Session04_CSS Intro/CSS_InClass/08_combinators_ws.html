@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* style in blue(maybe red/default is blue) the link to scoala informala */
+        p > a{
+            color : red;
+        }
+        /* style in red the link to google */
+        div > a {
+            color:green;
+        }
+        /* style in pink some other span */
+        div ~ p > span{
+            color:pink;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <p class="red">This is some text</p>
+        <p>This is <span>more</span> text</p>
+        <p>
+          Link to <a href="https://scoalainformala.ro">Scoala Informala</a>
+        </p>
+        <a href="https://google.com">Google</a>
+      </div>
+      <p>This is <span> some other</span>text</p>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Andrei Ciocodeica</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animate.css">
+    </head>
+
+    <body>
+        <div class="container navbar">
+            <header>
+                <div class="lgo">
+                    <h1>Andrei Ciocodeic&#259;</h1>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#about">about me</a></li>
+                        <li><a href="#skills">skills</a></li>
+                        <li><a href="#work">my work</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="container main-info-section">
+            <div class="text">
+                <h1>
+                    <span>H</span>
+                    <span class="m-left">i</span>
+                    <span class="m-left">,</span>
+                    <br>
+                    <span>I</span>
+                    <span class="m-left">'</span>
+                    <span class="m-left">m</span>
+                    <span class="name">A</span>
+                    <span class="m-left name">n</span>
+                    <span class="m-left name">d</span>
+                    <span class="m-left name">r</span>
+                    <span class="m-left name">e</span>
+                    <span class="m-left name">i</span>
+                    <span class="m-left">,</span>
+                    <br>
+                    <span>W</span>
+                    <span class="m-left">e</span>
+                    <span class="m-left">b</span>
+                    <span>D</span>
+                    <span class="m-left">e</span>
+                    <span class="m-left">s</span>
+                    <span class="m-left">i</span>
+                    <span class="m-left">g</span>
+                    <span class="m-left">n</span>
+                    <span class="m-left">e</span>
+                    <span class="m-left">r</span>
+                    <span class="m-left">.</span>
+                </h1>
+                <p>HTML / CSS / JavaScript</p>
+                <a href="#contact">contact me</a>
+            </div>
+            <div class="profile-image">
+                <img src="img/profile-image.png" alt="img">
+            </div>
+        </div>
+
+        <div class="container about" id="about">
+            <h1>About</h1>
+            <div class="about-me-info">
+                <p>I spent more then half my life playing video games or doing many stuff at my PC. In 2019 i was thinking to change my Petroleum Engineer career to an IT one and I started to look for online courses. At first i was learning at home by myself. At early 2020 i started an online couse - "IT Essentials" and then I went for a class course - "Intro in IT" to Scoala informala. What i liked the most was learning about FrontEnd that's why my next course was "FrontEnd Developer". Coding has changed my world. It's not just about apps. Learning to code gave me problem-solving skills and a way to communicate with others on a technical level. I can also develop websites and using my coding skills to get a better job. And I learned it all at <a href="https://scoalainformala.ro/" target="_blank">Scoala Informala</a> where they build your self-esteem and keep you motivated. Join me in this rewarding jouney. You'll have fun, get help and learn along the way!</p>
+            </div>
+            <img src="img/square-pattern.png" alt="img">
+        </div>
+
+        <div class="container skills" id="skills">
+            <h1>Skills</h1>
+            <p>My level as FrontEnd Developer is <em>Beginner</em>. Knowledge of HTML/ CSS and JavaScript, Browser Developer Tools, Responsive design, Testing/Debugging, Version Control/ GIT, teamwork and working with people across agency capabilities.  
+            I like to practice my coding skills almost every day to become better. I am sure that in the future I will become a very good Web Developer.</p>
+            <div class="html">
+                <div class="tag-html">
+                    <p>HTML</p>
+                </div>
+                <div class="progressbar">
+                    <div class="bar-html"></div>
+                </div>
+            </div>
+            <div class="css">
+                <div class="tag-css">
+                    <p>CSS</p>
+                </div>
+                <div class="progressbar">
+                    <div class="bar-css"></div>
+                </div>
+            </div>
+            <div class="js">
+                <div class="tag-javascript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="progressbar">
+                    <div class="bar-javascript"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container work" id="work">
+            <h1>Work</h1>
+            <div class="work-category">
+                <button id="designing" class="active" onclick="showRequiredCategory(this);">Web Designing</button>
+                <button id="apps" onclick="showRequiredCategory(this);">Web Apps</button>
+                <button id="animation" onclick="showRequiredCategory(this);">Web Animation</button>
+            </div>
+            <div class="category-designing showCategory">
+                <a href=""><img src="img/1.png"></a>
+                <a href=""><img src="img/2.png"></a>
+                <a href=""><img src="img/3.png"></a>
+                <a href=""><img src="img/2.png"></a>
+                <a href=""><img src="img/3.png"></a>
+            </div>
+            <div class="category-apps hideCategory">
+                <a href=""><img src="img/1.png"></a>
+                <a href=""><img src="img/2.png"></a>
+                <a href=""><img src="img/3.png"></a>
+            </div>
+            <div class="category-animation hideCategory">
+                <a href=""><img src="img/1.png"></a>
+                <a href=""><img src="img/2.png"></a>
+                <a href=""><img src="img/3.png"></a>
+                <a href=""><img src="img/2.png"></a>
+            </div>
+        </div>
+
+        <div class="container contact" id="contact">
+            <h1>Contact</h1>
+            <form>
+                <input type="text" name="name" placeholder="Full Name">
+                <input type="email" placeholder="Email">
+                <input type="email" placeholder="YourEmail@example.com" disabled>
+                <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+
+        <footer>
+            <hr>
+            <p>2020 Copyright. All Rights Reserved.</p>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

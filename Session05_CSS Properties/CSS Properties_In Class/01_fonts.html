@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <!-- 2 - google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&family=Roboto&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">  
+    <style>
+        /* 1 - Font Family - web safe fonts*/
+        /* Font stack - accesed in order */
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        /* 2-google fonts https://fonts.google.com/*/
+
+        p{
+            font-family: 'Roboto Slab', sans-serif;
+            /* default font size html tag inherited */
+            /* 3-font-size: 16px; */
+            font-size: 18px;
+            line-height: 1.4em;
+            
+        }
+        /* 4 - font weight numbers or values*/
+        #welcome > p > span{
+            font-weight: bold;
+        }
+
+        /* 5 - font style */
+        #about > p > span{
+            font-style: italic;
+            /* 6 - text transform */
+            text-transform: uppercase;
+            /* 7 - text decoration */
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="welcome">
+        <h2 class="heading2">Welcome</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ullam sunt optio, nulla <span> assumenda sed neque alias incidunt? Eaque id corporis ea veritatis enim voluptatum </span> amet animi! Quos, ipsam reprehenderit!</p>
+    </div>
+    <div id="about">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span> Eum nemo in explicabo? Ipsa fugiat perspiciatis a dolore mollitia</span>, voluptates pariatur.</p>
+    </div>
+</body>
+</html>

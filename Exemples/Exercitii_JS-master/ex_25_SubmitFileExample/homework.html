@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM Manipulation Homework</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="form">
+                <form class="input_name"> 
+                    <input type="text" name="fname" id="fname" placeholder="First Name"> 
+                    <br><br>
+                    <input type="text" name="lname" id="lname" placeholder="Last Name" >    
+                </form>
+               <div class="radio_gender">
+                    <p>Gender</p>
+                    <div class="radio_buttons">
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">M</label>
+                        <br>
+                        <input type="radio" name="gender" id="female" checked>
+                        <label for="female">F</label>
+                    </div>
+               </div>
+               <div class="message_submit">
+                    <textarea id="message" cols="41" rows="10">Your message here...</textarea>
+                    <br>
+                    <input type="submit" value="Submit" id="button_submit">
+               </div>
+            </div>
+            <div class="image">
+                <img src="image/img.jpg" alt="img" id="picture">
+           </div>
+        </div>
+
+        <script src="homework.js"></script>
+    </body>
+</html>
+
+<!-- <i class="fas fa-check-circle"></i> -->
+<!-- <i class="fas fa-times"></i> -->

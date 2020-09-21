@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz App</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="intro">
+                <h1>HTML Quiz</h1>
+                <h2>The Test</h2>
+                <p> The test contains 40 questions and there is no time limit.
+                    <br>
+                    The test is not official, it's just a nice way to see how much you know, or don't know, about HTML.
+                </p>
+                <h2>Count Your Score</h2>
+                <p>You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed. Maximum score is 40 points.</p>
+            </div>
+            <div class="start">
+                <h2>Start the Quiz</h2>
+                <p>Good luck!</p>
+                <button id="go">Start the HTML Quiz</button>
+                <p id="result"></p>
+                <p id="timer"></p>
+            </div>
+            <div class="test">
+                <div class="hidden q1">
+                    <h4>Question 1 of 40:</h4>
+                    <p>What does HTML stand for?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">Home Tool Markup Language</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">Hyperlinks and Text Markup Language</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">Hyper Text Markup Language</label>
+                    </div>
+                    <button class="next" id="next1">Next</button>
+                </div>
+                <div class="hidden q2">
+                    <h4>Question 2 of 40:</h4>
+                    <p>Who is making the Web standards?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">Microsoft</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">Mozilla</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">The World Wide Web Consortium</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">Google</label>
+                    </div>
+                    <button class="next" id="next2">Next</button>
+                </div>
+                <div class="hidden q3">
+                    <h4>Question 3 of 40:</h4>
+                    <p>Choose the correct HTML element for the largest heading:</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;heading&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;head&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;h6&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">&lt;h1&gt;</label>
+                    </div>
+                    <button class="next" id="next3">Next</button>
+                </div>
+                <div class="hidden q4">
+                    <h4>Question 4 of 40:</h4>
+                    <p>What is the correct HTML element for inserting a line break?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;br&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;lb&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;break&gt;</label>
+                    </div>
+                    <button class="next" id="next4">Next</button>
+                </div>
+                <div class="hidden q5">
+                    <h4>Question 5 of 40:</h4>
+                    <p>What is the correct HTML for adding a background color?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;background&gt;yellow&lt;/background&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;body bg="yellow"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;body style="background-color:yellow;"&gt;</label>
+                    </div>
+                    <button class="next" id="next5">Next</button>
+                </div>
+                <div class="hidden q6">
+                    <h4>Question 6 of 40:</h4>
+                    <p>Choose the correct HTML element to define important text</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;b&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;important&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;strong&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">&lt;i&gt;</label>
+                    </div>
+                    <button class="next" id="next6">Next</button>
+                </div>
+                <div class="hidden q7">
+                    <h4>Question 7 of 40:</h4>
+                    <p>Choose the correct HTML element to define emphasized text</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;italic&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;i&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;em&gt;</label>
+                    </div>
+                    <button class="next" id="next7">Next</button>
+                </div>
+                <div class="hidden q8">
+                    <h4>Question 8 of 40:</h4>
+                    <p>What is the correct HTML for creating a hyperlink?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;a name="http://www.w3schools.com"&gt;W3Schools.com&lt;a&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;a href="http://www.w3schools.com"&gt;W3Schools.com&lt;/a&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;a&gt;http://www.w3schools.com&lt;/a&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">&lt;a url="http://www.w3schools.com"&gt;W3Schools.com&lt;a&gt;</label>
+                    </div>
+                    <button class="next" id="next8">Next</button>
+                </div>
+                <div class="hidden q9">
+                    <h4>Question 9 of 40:</h4>
+                    <p>Which character is used to indicate an end tag?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">/</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">*</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">⌃</label>
+                    </div>
+                    <button class="next" id="next9">Next</button>
+                </div>
+                <div class="hidden q10">
+                    <h4>Question 10 of 40:</h4>
+                    <p>How can you open a link in a new tab/browser window?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;a href="url target="new"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;a href="url" new&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;a href="url target="_blank"&gt;</label>
+                    </div>
+                    <button class="next" id="next10">Next</button>
+                </div>
+                <div class="hidden q11">
+                    <h4>Question 11 of 40:</h4>
+                    <p>Which of these elements are all &lt;table&gt; elements?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;table&gt;&lt;tr&gt;&lt;td&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;table&gt;&lt;head&gt;&lt;tfoot&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;table&gt;&lt;tr&gt;&lt;tt&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">&lt;thead&gt;&lt;body&gt;&lt;tr&gt;</label>
+                    </div>
+                    <button class="next" id="next11">Next</button>
+                </div>
+                <div class="hidden q12">
+                    <h4>Question 12 of 40:</h4>
+                    <p>Inline elements are normally displayed without starting a new line.</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">False</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">true</label>
+                    </div>
+                    <button class="next" id="next12">Next</button>
+                </div>
+                <div class="hidden q13">
+                    <h4>Question 13 of 40:</h4>
+                    <p>How can you make a numbered list?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;ol&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;dl&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;ul&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">&lt;list&gt;</label>
+                    </div>
+                    <button class="next" id="next13">Next</button>
+                </div>
+                <div class="hidden q14">
+                    <h4>Question 14 of 40:</h4>
+                    <p>How can you make a bulleted list?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;dl&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;ul&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;list&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">&lt;ol&gt;</label>
+                    </div>
+                    <button class="next" id="next14">Next</button>
+                </div>
+                <div class="hidden q15">
+                    <h4>Question 15 of 40:</h4>
+                    <p>What is the correct HTML for making a checkbox?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;checkbox&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;input type="check"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;input type="checkbox"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">&lt;check&gt;</label>
+                    </div>
+                    <button class="next" id="next15">Next</button>
+                </div>
+                <div class="hidden q16">
+                    <h4>Question 16 of 40:</h4>
+                    <p>What is the correct HTML for making a text input field?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;input type="textfield"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;input type="text"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;textfield&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">&lt;textinput type="text"&gt;</label>
+                    </div>
+                    <button class="next" id="next16">Next</button>
+                </div>
+                <div class="hidden q17">
+                    <h4>Question 17 of 40:</h4>
+                    <p>What is the correct HTML for making a drop-down list?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;input type="list"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;input type="dropdown"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;select&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">&lt;list&gt;</label>
+                    </div>
+                    <button class="next" id="next17">Next</button>
+                </div>
+                <div class="hidden q18">
+                    <h4>Question 18 of 40:</h4>
+                    <p>What is the correct HTML for making a text area?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;input type="textbox"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;textarea&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;input type="textarea"&gt;</label>
+                    </div>
+                    <button class="next" id="next18">Next</button>
+                </div>
+                <div class="hidden q19">
+                    <h4>Question 19 of 40:</h4>
+                    <p>What is the correct HTML for inserting an image?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;img alt="MyImage"&gt;image.gif&lt;/img&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;img src="image.gif" alt="MyImage"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;imgage src="image.gif" alt="MyImage"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">&lt;img href="image.gif" alt="MyImage"&gt;</label>
+                    </div>
+                    <button class="next" id="next19">Next</button>
+                </div>
+                <div class="hidden q20">
+                    <h4>Question 20 of 40:</h4>
+                    <p>What is the correct HTML for inserting a background image?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;background img="background.gif"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;body style="background-image:url(background.gif)"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;body bg="background.gif"&gt;</label>
+                    </div>
+                    <button class="next" id="next20">Next</button>
+                </div>
+                <div class="hidden q21">
+                    <h4>Question 21 of 40:</h4>
+                    <p>An &lt;iframe&gt; is used to display a web page within a web page.</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">True</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">False</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">There is no such thing as an &lt;iframe&gt;</label>
+                    </div>
+                    <button class="next" id="next21">Next</button>
+                </div>
+                <div class="hidden q22">
+                    <h4>Question 22 of 40:</h4>
+                    <p>HTML comments start with &lt;!-- and end with --&gt;</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">True</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">False</label>
+                    </div>
+                    <button class="next" id="next22">Next</button>
+                </div>
+                <div class="hidden q23">
+                    <h4>Question 23 of 40:</h4>
+                    <p>Block elements are normally displayed without starting a new line.</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">True</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">False</label>
+                    </div>
+                    <button class="next" id="next23">Next</button>
+                </div>
+                <div class="hidden q24">
+                    <h4>Question 24 of 40:</h4>
+                    <p>Which HTML element defines the title of a document?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;meta&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;title&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;head&gt;</label>
+                    </div>
+                    <button class="next" id="next24">Next</button>
+                </div>
+                <div class="hidden q25">
+                    <h4>Question 25 of 40:</h4>
+                    <p>Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">alt</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">src</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">longdesc</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">title</label>
+                    </div>
+                    <button class="next" id="next25">Next</button>
+                </div>
+                <div class="hidden q26">
+                    <h4>Question 26 of 40:</h4>
+                    <p>Which doctype is correct for HTML5?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;!DOCTYPE HTML5&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;!DOCTYPE HTML PUBLIC "-//W#C//DTD HTML 5.0//EN" "http://www.w3.org/TR/html5/strict.dtd"&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;!DOCTYPE html&gt;</label>
+                    </div>
+                    <button class="next" id="next26">Next</button>
+                </div>
+                <div class="hidden q27">
+                    <h4>Question 27 of 40:</h4>
+                    <p>Which HTML element is used to specify a footer for a document or section?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;footer&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;section&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;bottom&gt;</label>
+                    </div>
+                    <button class="next" id="next27">Next</button>
+                </div>
+                <div class="hidden q28">
+                    <h4>Question 28 of 40:</h4>
+                    <p>In HTML, you can embed SVG elements directly into an HTML page.</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">True</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">False</label>
+                    </div>
+                    <button class="next" id="next28">Next</button>
+                </div>
+                <div class="hidden q29">
+                    <h4>Question 29 of 40:</h4>
+                    <p>What is the correct HTML element for playing video files?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;video&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;movie&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;media&gt;</label>
+                    </div>
+                    <button class="next" id="next29">Next</button>
+                </div>
+                <div class="hidden q30">
+                    <h4>Question 30 of 40:</h4>
+                    <p>What is the correct HTML element for playing audio files?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;sound&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;audio&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;mp3&gt;</label>
+                    </div>
+                    <button class="next" id="next30">Next</button>
+                </div>
+                <div class="hidden q31">
+                    <h4>Question 31 of 40:</h4>
+                    <p>The HTML global attribute, "contenteditable" is used to:</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">Specify whether the content of an element should be editable or not</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">Specifies a context menu for an element. The menu apperars when a user right-clicks on the element</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">Return the position of the first found occurence of content inside a string</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">Update content from the server</label>
+                    </div>
+                    <button class="next" id="next31">Next</button>
+                </div>
+                <div class="hidden q32">
+                    <h4>Question 32 of 40:</h4>
+                    <p>In HTML, onblur and onfocus are:</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">Style attributes</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">Event attributes</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">HTML elements</label>
+                    </div>
+                    <button class="next" id="next32">Next</button>
+                </div>
+                <div class="hidden q33">
+                    <h4>Question 33 of 40:</h4>
+                    <p>Graphics defined by SVG is in which format?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">CSS</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">XML</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">HTML</label>
+                    </div>
+                    <button class="next" id="next33">Next</button>
+                </div>
+                <div class="hidden q34">
+                    <h4>Question 34 of 40:</h4>
+                    <p>The HTML &lt;canvas&gt; element is used to:</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">display database records</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">manipulate data in MySQL</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">draw graphics</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">create draggable elements</label>
+                    </div>
+                    <button class="next" id="next34">Next</button>
+                </div>
+                <div class="hidden q35">
+                    <h4>Question 35 of 40:</h4>
+                    <p>In HTML, which attribute is used to specify that an input field must be filled out?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">formvalidate</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">required</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">placeholder</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">validate</label>
+                    </div>
+                    <button class="next" id="next35">Next</button>
+                </div>
+                <div class="hidden q36">
+                    <h4>Question 36 of 40:</h4>
+                    <p>Which input type defines a slider control?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">slider</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">range</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">search</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">controls</label>
+                    </div>
+                    <button class="next" id="next36">Next</button>
+                </div>
+                <div class="hidden q37">
+                    <h4>Question 37 of 40:</h4>
+                    <p>Which HTML element is used to display a scalar measurement within a range?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;measure&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;range&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;gauge&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">&lt;meater&gt;</label>
+                    </div>
+                    <button class="next" id="next37">Next</button>
+                </div>
+                <div class="hidden q38">
+                    <h4>Question 38 of 40:</h4>
+                    <p>Which HTML element defines navigation links?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;nav&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;navigate&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;navigation&gt;</label>
+                    </div>
+                    <button class="next" id="next38">Next</button>
+                </div>
+                <div class="hidden q39">
+                    <h4>Question 39 of 40:</h4>
+                    <p>In HTML, what does the &lt;aside&gt; element define?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">Content aside from the page content</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">The ASCII character-set; to send info between computers on the Internet</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">A navigation list to be shown at the left side of the page</label>
+                    </div>
+                    <button class="next" id="next39">Next</button>
+                </div>
+                <div class="hidden q40">
+                    <h4>Question 40 of 40:</h4>
+                    <p>Which HTML element is used to specify a header for a document or section?</p>
+                    <div>
+                        <input type="checkbox" id="1">
+                        <label for="1">&lt;top&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="2">
+                        <label for="2">&lt;head&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="3">
+                        <label for="3">&lt;header&gt;</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="4">
+                        <label for="4">&lt;section&gt;</label>
+                    </div>
+                    <button class="next" id="finish">Finish</button>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

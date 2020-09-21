@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    max-width: 1000px;
+}
+
+.container{
+    background-color: #e0e0e0;
+    margin: auto;
+    max-width: 800px;
+    border: 1px solid black;
+    padding: 30px;
+}
+
+#lista_elevi_wrapper{
+    text-align: center;
+}
+
+#text, #addElev, #sortCresc, #sortDescresc, #sortCrescNota, #sortDescrescNota{
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+#myTable, #th1, #th2, #th3, #th4{
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid purple;
+    /* daca vreau ca tabelul sa fie hidden */
+    /* visibility: hidden;  */
+}
+
+#th1{
+    width: 270px;
+}
+
+#th2{
+    width: 150px;
+}
+
+#th3{
+    width: 200px;
+}
+
+#th4{
+    width: 50px;
+}
+
+#note_elev_wrapper{
+    text-align: center;
+    margin-top: 20px;
+    /* daca vreau ca partea de jos sa fie hidden */
+    visibility: hidden;
+}
+
+#notaNoua{
+    margin-bottom: 20px;
+}
+
+#ascundeNote, #nota, #addNota{
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+#tableNote, #th5, #th6{
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid grey;
+}
+
+#th5{
+    width: 60px;
+    border: 2px solid purple;
+}
+
+#th6{
+    width: 30px;
+    border: 2px solid purple;
+}
+
+/* pentru toggle() */
+.hidden{
+    visibility: hidden;
+}
+
+
+
+
+

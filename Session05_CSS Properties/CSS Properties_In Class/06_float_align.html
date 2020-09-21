@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Align</title>
+    <style>
+        /* 2 - style the body */
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4em;
+        }
+        /* 1 - center the content */
+        .container {
+            /* max-width for responsiveness instead of width */
+            width: 900px;
+            margin: auto;
+        }
+
+        /* 3 - style the class box */
+        .box{
+            background-color: lightgrey;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .box p {
+            /* 4 - text align */
+            text-align: justify;
+        }
+
+        #box1 {
+            /* 5 - needs widht */
+            float: left;
+            /* 6 */
+            width: 200px;
+        }
+
+        #box2 {
+            float: left;
+            width: 200px;
+        }
+
+        #box3 {
+            /* check also with right */
+            float: left;
+            width: 200px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box1" class="box">
+            <h3>box1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, praesentium! In quas labore laudantium commodi magni possimus eum quo deserunt.</p>
+        </div>
+        <div id="box2" class="box">
+            <h3>box2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, praesentium! In quas labore laudantium commodi magni possimus eum quo deserunt.</p>
+        </div>
+        <div id="box3" class="box">
+            <h3>box3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, praesentium! In quas labore laudantium commodi magni possimus eum quo deserunt.</p>
+        </div>
+    </div>
+</body>
+</html>

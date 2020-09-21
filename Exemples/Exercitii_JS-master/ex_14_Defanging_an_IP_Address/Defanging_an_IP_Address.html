@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defanging an IP Address</title>
+</head>
+
+<body>
+    <div>
+        <h3>Defanging an IP Address</h3>
+        <p>Given a valid (IPv4) IP address, return a defanged version of that IP address.
+        <br>
+        A defanged IP address replaces every period "." with "[.]".
+        </p>
+    </div>
+    <div>
+        <label for="IP_Address">The IP Address is:</label>
+        <input type="text" name="IP_Address" id="IP_Address" placeholder="xxx.xxx.xxx.xxx" minlength="7" maxlength="15" size="15">
+        <br><br>
+        <button id="button">Defanging</button>
+        <p id="rezultat"></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

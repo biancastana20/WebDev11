@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Andrei</title>
+
+        <link rel="stylesheet" href="index.css">
+
+        <script src="javaScript.js"></script>
+
+    </head>
+
+    <body>
+
+        <!-- my first example -->
+        <div id="example1">
+
+            <!-- <img src="clickme.png" alt="click me" onclick="sum1toN(8);"> -->
+            <h2>Suma a doua numere primite ca input</h2>
+            <label for="textbox1">a:</label>
+            <input type="text" id="textbox1"><br><br>
+            <label for="textbox2">b:</label>
+            <input type="text" id="textbox2"><br><br><br>
+
+            <input type="button" value="sum" onclick="sumOf2Numbers();">
+
+            <p id="myP1">Aici va fi rezultatul</p>
+            
+        </div><br>
+
+        <!-- Workshop part1 -->
+        <div id="example2">
+
+            <label for="textbox3">Enter First Number:</label>
+            <input type="number" id="textbox3" ><br><br>
+            <label for="textbox4">Enter Second Number:</label>
+            <input type="number" id="textbox4"><br><br><br>
+
+            <input type="button" value="Add" onclick="AdditionOf2Numbers()">
+            <input type="button" value="Substract" onclick="sub()">
+            <input type="button" value="Multiply" onclick="multiply()">
+            <input type="button" value="Divide" onclick="division()">
+            <input type="button" value="Modulus" onclick="modulus()">
+
+            <p id="firstP">This is the result</p>
+
+        </div><br>
+
+        <!-- workshop part2 -->
+        <div id="example3">
+
+            <label for="textbox5">CNP:</label>
+            <input type="text" maxlength="13" id="textbox5"><br><br>
+            <label for="textbox6">Day:</label>
+            <input type="number" maxlength="2" id="textbox6"><br><br>
+            <label for="textbox7">Month:</label>
+            <input type="number" maxlength="2" id="textbox7"><br><br>
+            <label for="textbox8">Year:</label>
+            <input type="number" maxlength="4" id="textbox8"><br><br>
+
+            <input type="button" value="Verify" onclick="verifyDay(), verifyMonth(), verifyYear()">
+
+            <p id="verifyD"></p>
+            <p id="verifyM"></p>
+            <p id="verifyY"></p>
+
+        </div>
+
+        
+    </body>
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longest Common Prefix</title>
+</head>
+
+<body>
+    <div>
+        <h3>Longest Common Prefix</h3>
+        <p>
+            Write a function to find the longest common prefix string amongst an array of strings. 
+            <br><br>
+            If there is no common prefix, return an empty string "".
+        </p>
+    </div>
+    <div>
+        <label for="string">Write the array of strings:</label>
+        <input type="text" name="string" id="string" onkeyup="this.value = this.value.toLowerCase();">
+        <button id="button" onclick="longestCommonPrefix();">calculate</button>
+        <p id="result"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
