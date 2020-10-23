@@ -1,0 +1,66 @@
+/* -------------------starte header-------------------------- */
+header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.header-btn {
+    cursor: pointer;
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 0.8vw;
+    display: inline-block;
+    transition-duration: 0.5s;
+}
+
+.header-btn:hover {
+    background-color: #0b16aa;
+    color: white;
+}
+
+
+#header-btn {
+    color: white;
+    text-decoration: none;
+}
+#header-btn :hover{
+    background-color: #0b16aa;
+    color: white;
+}
+
+/* -------------------end header-------------------------- */
+
+section {
+    /* border:2px solid red; */
+    padding: 30px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 60%; 
+    margin: auto;
+}
+
+#input-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+}
+input[type=text], input[type=number], textarea {
+    /* width: 100%; */
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    /* border: 2px solid yellow; */
+  }
+ 

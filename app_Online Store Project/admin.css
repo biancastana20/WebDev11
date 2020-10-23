@@ -1,0 +1,125 @@
+/* -------------------start HEADER PRODUCT MANAGEMENT-------------------------- */
+#product-management {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    margin-top: 100px;
+    align-items: center;
+}
+
+[id*=header-btn] {
+    cursor: pointer;
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 0.8vw;
+    display: inline-block;
+    transition-duration: 0.5s;
+    color: white;
+    text-decoration: none;
+    background-color: var(--main-color);
+}
+
+[id*=header-btn]:hover {
+    background-color: #0b16aa;
+    color: white;
+}
+/* -------------------end HEADER PRODUCT MANAGEMENT-------------------------- */
+
+/* -----------------------start TABLE WITH BOOKS  ---------------*/
+#table-books {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+}
+
+#table-books th,
+td {
+    text-align: left;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+table p {
+    font-size: 13px;
+}
+
+table span {
+    font-size: 13px;
+}
+
+.admin-book-img {
+    width: 50px;
+}
+
+.admin-book-img:hover {
+    transform: scale(5);
+}
+
+#btn-remove-book {
+    cursor: pointer;
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 0.8vw;
+    display: inline-block;
+    transition-duration: 0.5s;
+}
+
+/* -----------------------end TABLE WITH BOOKS ---------------*/
+
+
+
+/* --------------------start ADD NEW BOOK container--------------- */
+#add-new-book-container{
+    visibility: hidden;
+}
+/* ------- -----------header add new book ------------------------------ */
+#add-new-book {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    margin-top: 100px;
+    align-items: center;
+}
+
+/* ------------------start form add new book--------------------------- */
+#form-add-book {
+    /* border:2px solid red; */
+    padding: 30px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 50%; 
+    margin: auto;
+    text-align: center;
+}
+
+#input-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+}
+input[type=text], input[type=number], textarea {
+    /* width: 100%; */
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    /* border: 2px solid yellow; */
+  }
+/* --------------------start ADD NEW BOOK container--------------- */
