@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <div class="weather-container">
+<!------------------------ SHOW WEATHER NOW --------------------------------->
+        <div class="input-field">
+            <input type="text" id="input" placeholder="city">
+            <button id="btnWeather">Show weather</button>
+            <button id="btnForecast">Show forecast</button>
+        </div>
+
+        <div class="wather-now">
+            <div class="city-icon-temp">
+                <!-- <h3>Weather now: </h3> -->
+                <p id="city"></p>
+                <img src="" alt="" id="icon">
+                <p id="temp" class="temp"></p>
+
+            </div>
+
+
+            <div class="weather-now-map">
+                <div class="weather-now-info">
+                    <h4>Weather now:</h4>
+                    <p id="desc">Description: </p>
+                    <p id="umd">Humidity: </p>
+                    <p id="pres">Pressure: </p>
+                    <p id="minima">Temp min: </p>
+                    <p id="maxima">Temp max: </p>
+                </div>
+                <div id="map"></div>
+            </div>
+        </div>
+
+<!------------------ WEATHER FORECAST -------------------------------------- -->
+        <div class="weather-forecast">
+            <h3>Weather forecast for the next days</h3>
+            <hr class="horisontal-line">
+            <div id="weather-forecast-info"></div>
+        </div>
+    </div>
+
+    <script src="script1.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfqBh3yzvY2pUXMtplK1P6voQnHG80tis">
+    </script>
+</body>
+
+</html>
