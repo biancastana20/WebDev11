@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: #838383; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* margin: 0; */
+    align-items: center;
+    margin: auto;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid black; */
+    /* text-align: center; */
+    align-items: center;
+    width: 1000px;
+    /* margin: auto; */
+}
+
+
+.map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    border-radius: 7px;
+}
