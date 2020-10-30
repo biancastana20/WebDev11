@@ -13,7 +13,16 @@ const BOOKS_ITEM_URL =
 //------------------------------------------------------START LINK ALL PAGES -----------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
   const ui = new UI();
-  const books= new Book()
+  const books = new Book()
+
+  // la intrarea in shop verificam daca avem cart in localStorage
+  let cart = localStorage.getItem('cart') //daca exista deja in local storage nu mai face codul de mai jos (utilizatorul a intrat cel putin odata)
+  if (!cart) { // daca nu exista cart in localStorage il setam 
+    localStorage.setItem('cart', JSON.stringify({
+      products: [],
+      total: 0
+    })
+    )}
   // console.log(window)
   // console.log(window.location);
   if (window.location.href.indexOf("index.html") >= 0) {
@@ -32,13 +41,16 @@ document.addEventListener("DOMContentLoaded", () => {
     ui.managebooks();
     ui.addNewBook()
   }
+  if (window.location.href.indexOf("cart.html") >= 0) {
+    getCart();
+  }
 });
 //-------------------------------------- -------------- END LINK ALL PAGES -------------------------------------------
 
 
 //---------------------------------------------------- class Book + constructor atribute -----------------------------
 class Book {
-  constructor(path, title, author, price, description, quantity,id) {
+  constructor(path, title, author, price, description, quantity, id) {
     // console.log(this);
     this.path = path;
     this.title = title;
@@ -51,7 +63,7 @@ class Book {
 }
 
 class UI {
-//---------------------------------------- START LIST OF PRODUCTS --------------------------------------------------
+  //---------------------------------------- START LIST OF PRODUCTS --------------------------------------------------
   getBooks() {
     fetch(BOOKS_URL, {
       method: 'GET'
@@ -60,7 +72,7 @@ class UI {
         return res.json();
       })
       .then(function (data) {
-        //console.log(data) => un obiect de obiecte
+        //console.log(data) //=> un obiect de obiecte
         let ids = Object.keys(data); // ['0','1','2' .....'-MK9pu7lhj89ySrYFstC']
         // containerBooks.innerHTML = ""
         ids.forEach(function (key) {
@@ -82,41 +94,41 @@ class UI {
         console.log(err);
       });
   }
-//---------------------------------------------- END  LIST OF PRODUCTS ---------------------------------------------
+  //---------------------------------------------- END  LIST OF PRODUCTS ---------------------------------------------
 
-//----------------------------------- ----------- SEARCH BOOK BY TITLE -----------------------------------------------
-  findBook(title){
-  fetch(BOOKS_URL)
-    .then(function (res) {
-      return res.json();
-    })
-    .then(function (data) {
-      //console.log(data)
-      let arr = [];
-      let ids = Object.keys(data);
-      // console.log(ids) ["0", "1", "2"..."39"]
-      ids.forEach(function (key) {
-        //console.log(key) //0 1 2 3 ...39
-        let book = new Book(
-          data[key].path,
-          data[key].title,
-          data[key].author,
-          data[key].price,
-          data[key].description,
-          data[key].quantity, 
-          key,  // id cartii va lua val lui key -> pentru a putea da search si printre cartile adaugate din aplicatie altfel puteam pune data[key].id
-                //ca sa mearga butonul details
-        ); 
-        //console.log(book)
-        arr.push(book);
-      });
-      //filtram prin array arr ingredientele
-      const filtered = arr.filter((book) => {
-        return book.title.toLowerCase().indexOf(title) >= 0; // sa existe titlul pe care il caut, altfel return -1
-      });
-      bookFiltered.innerHTML =""; //se reinitializeaza cu noile valori
-      filtered.map ((element) => { //parcurgere arr
-        bookFiltered.innerHTML += `
+  //----------------------------------- ----------- SEARCH BOOK BY TITLE -----------------------------------------------
+  findBook(title) {
+    fetch(BOOKS_URL)
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (data) {
+        console.log(data)
+        let arr = [];
+        let ids = Object.keys(data);
+        // console.log(ids) ["0", "1", "2"..."39"]
+        ids.forEach(function (key) {
+          //console.log(key) //0 1 2 3 ...39
+          let book = new Book(
+            data[key].path,
+            data[key].title,
+            data[key].author,
+            data[key].price,
+            data[key].description,
+            data[key].quantity,
+            key,  // id cartii va lua val lui key -> pentru a putea da search si printre cartile adaugate din aplicatie altfel puteam pune data[key].id
+            //ca sa mearga butonul details
+          );
+          //console.log(book)
+          arr.push(book);
+        });
+        //filtram prin array arr ingredientele
+        const filtered = arr.filter((book) => {
+          return book.title.toLowerCase().indexOf(title) >= 0; // sa existe titlul pe care il caut, altfel return -1
+        });
+        bookFiltered.innerHTML = ""; //se reinitializeaza cu noile valori
+        filtered.map((element) => { //parcurgere arr
+          bookFiltered.innerHTML += `
         <article class="book">
         <div class="book-container">
             <img src="${element.path}" alt="book" class="book-img">
@@ -129,32 +141,33 @@ class UI {
         </div>
     </article>          
                       `;
+        });
+      })
+      .catch(function (err) {
+        console.log(err);
       });
-    })
-    .catch(function (err) {
-      console.log(err);
-    });
   }
 
-  filterBtn(){ 
-  const searchBookBtn = document.getElementById('nav-button-search-book')
-  const inputTitle = document.getElementById('nav-search-book')
+  filterBtn() {
+    const searchBookBtn = document.getElementById('nav-button-search-book')
+    const inputTitle = document.getElementById('nav-search-book')
 
-  searchBookBtn.addEventListener("click", (e) => {
+    searchBookBtn.addEventListener("click", (e) => {
       e.preventDefault(); // eliminam comportamentul default al butonului de tip submit (afiseaza 1,2 sec)
-      if (inputTitle.value === "") {
-       alert("Please add a book title!");
+      if (!(inputTitle.value)) {
+        alert("Please add a book title!");
+
       } else {
         this.findBook(inputTitle.value);
       }
     });
   }
-//----------------------------------- ----------- END SEARCH BOOK BY TITLE -----------------------------------------------
+  //----------------------------------- ----------- END SEARCH BOOK BY TITLE -----------------------------------------------
 
-//---------------------------------------------- START DETAILS PAGE ------------------------------------------------
-// details button event from (index.html) --> details.html
+  //---------------------------------------------- START DETAILS PAGE ------------------------------------------------
+  // details button event from (index.html) --> details.html
   showDetailsBook(id) {
-    fetch(BOOKS_ITEM_URL + id + '.json')
+    fetch(BOOKS_ITEM_URL + id + '.json') //id = 0 1 2 ..... -MKokWAPUCmGuB5
       .then(function (res) {
         return res.json();
       })
@@ -168,7 +181,7 @@ class UI {
                             <h5>Author: ${data.author}</h5>
                             <p>Price: $${data.price}</p>
                             <p>In stoc: ${data.quantity}<p>
-                            Cantitate <input type="number" id="details-book-quantity">
+                            Cantitate <input type="number" id="details-book-quantity" value="1">
                             <div>
                                 <button class="btn-add-to-cart" book-id="${id}" onclick ="addToChart('${id}')">Add to cart</button>
                             </div>
@@ -187,7 +200,7 @@ class UI {
 
   //------------------------------------------------ ------END DETAILS PAGE ------------------------------------------
 
-//------------------------- ---------------------- START ADMIN PAGE WITH LIST OF PRODUCTS --------------------------
+  //------------------------- ---------------------- START ADMIN PAGE WITH LIST OF PRODUCTS --------------------------
   managebooks() {
     fetch(BOOKS_URL)
       .then(function (res) {
@@ -226,16 +239,16 @@ class UI {
         console.log(err);
       });
   }
-//---------------------------------------------- END ADMIN PAGE WITH LIST OF PRODUCTS-------------------------------
+  //---------------------------------------------- END ADMIN PAGE WITH LIST OF PRODUCTS-------------------------------
 
 
-//-------------------------------------------------------  ADD NEW BOOK button ---------------------------------------
+  //-------------------------------------------------------  ADD NEW BOOK button ---------------------------------------
   addNewBook() {
     document.getElementById("header-btn-add-new-book").addEventListener("click", () => {
       document.getElementById("product-management-container").style.display = "none"
       document.getElementById("add-new-book-container").style.visibility = "visible"
-  })
-// --------------------------------- ------------- START SAVE BOOK BUTTON --> POST METHOD --------------------------
+    })
+    // --------------------------------- ------------- START SAVE BOOK BUTTON --> POST METHOD --------------------------
     const addBookId = document.getElementById("book-id")
     const addImageBook = document.getElementById("image")
     const addTitleBook = document.getElementById("title")
@@ -243,10 +256,10 @@ class UI {
     const addPriceBook = document.getElementById("price")
     const addDescriptionBook = document.getElementById("description")
     const addQuantityBook = document.getElementById("quantity")
-  
+
     document.getElementById("header-btn-save-book").addEventListener("click", () => {
-       const ui = new UI();
-       //console.log(ui) UI{ cu toate metodele manageBook/getBooks/findBook/filterBtn...}
+      const ui = new UI();
+      //console.log(ui) UI{ cu toate metodele manageBook/getBooks/findBook/filterBtn...}
       let newBook = new Book(
         addImageBook.value,
         addTitleBook.value,
@@ -256,7 +269,7 @@ class UI {
         addQuantityBook.value,
         addBookId.value
       );
-     //console.log(newBook)  // {....}
+      //console.log(newBook)  // {....}
       fetch(BOOKS_URL, {
         method: 'POST',
         body: JSON.stringify(newBook)
@@ -269,12 +282,12 @@ class UI {
         .catch(function (err) {
           console.log(err);
         });
-  
+
       document.getElementById("product-management-container").style.display = "block"
       document.getElementById("add-new-book-container").style.visibility = "hidden"
     })
   }
-//------------------------ -----------------------------END ADD NEW BOOK button -------------------------------------------
+  //------------------------ -----------------------------END ADD NEW BOOK button -------------------------------------------
 }
 
 //-------------------------------------------   DELETE from ADMIN --------------------------------------
@@ -287,41 +300,108 @@ function deleteBook(id) {
       return res.json();
     })
     .then(function (data) {
-     // console.log(data);
+      // console.log(data);
     })
     .catch(function (err) {
       console.log(err);
     });
 }
 
-//---------------------------------------------START LOCAL STORRAGE------------------------------------------------
-const succesMessage = document.querySelector('.details-hidden-banner')
-function addToChart (id) {
-  console.log(document.getElementById("details-book-quantity").value)
+//---------------------------------------------START ADD IN LOCAL STORRAGE------------------------------------------------
+
+function addToChart(id) {
+  const succesMessage = document.querySelector('.details-hidden-banner')
+  const quantity = +document.getElementById('details-book-quantity').value //(+) - unary opperator can convert strng to nr
+  
   fetch(BOOKS_ITEM_URL + id + '.json')
     .then(function (res) {
-     return res.json();
+      return res.json();
     })
     .then(function (data) {
-      let book = new Book (data.path, data.title, data.author, data.price)
-//console.log(book)
-    localStorage.setItem(id, JSON.stringify(book))
-    console.log(localStorage)
-    succesMessage.style.visibility='visible'
-   setTimeout(()=> succesMessage.style.visibility='hidden',2000)
-  })
+      let cart = JSON.parse(localStorage.getItem('cart')) // luam cartul din localstorage  
+      let alreadyInCart = cart.products.find(function(el){return el.id == id})//verificam daca book ul pe care vrem sa facem entry in cart deja exista in cart
+     // console.log(alreadyInCart)  // obiectul book cu id gasit - fctia find la true returneaza primul element gasit //in cart tot timpil vom avea 1 sg elem cu acelasi id
+      let entry = { //formam entry-ul
+        id: id,
+        img: data.path,
+        title: data.title,
+        author:data.author,
+        quantity: quantity,
+        unitPrice: data.price,
+        subTotal: Math.round(+data.price * quantity * 100) / 100 //math.round(2.5) = 2 ...math.round(2.5)*100/100 =2.5
+      }
+      //console.log(entry)
+  
+      if (alreadyInCart) {
+        /* 
+          daca deja exista, parcurgem arrayul de products din cart
+          la elementul care deja exista in cart adaugam cantitatea si facem update la subtotal
+          pe restul le lasam asa cum sunt
+        */
+        cart.products = cart.products.map(el => {
+          if (el.id == alreadyInCart.id) {
+            el.quantity += entry.quantity
+            el.subTotal += entry.subTotal
+          }
+          return el
+        })
+      } else {
+        // daca nu aveam in cart, il adaugam pur si simplu in array ul de produse din cart
+        cart.products.push(entry)
+      }
+      // facem update la total
+      // cart.total = Math.round(cart.products.reduce((acc, curr) => acc += curr.subTotal, 0) * 100) / 100
+      let total = cart.products.reduce((acc, curr) => {
+        return acc = acc + curr.subTotal
+       }, 0) //initializam acc=0
+      cart.total = Math.round(total * 100) / 100
+      
+      //setam in localStorage cart 
+      localStorage.setItem('cart', JSON.stringify(cart))
+
+      succesMessage.style.visibility = 'visible'
+      setTimeout(() => succesMessage.style.visibility = 'hidden', 2000)
+    })
 }
 
-//--------------------------------SHOPPING CART-------------------
- document.querySelector(".cart-btn").addEventListener('click', (e) =>{
-  e.preventDefault()
-  console.log(document.getElementById("details-book-quantity").value)
-      const book = JSON.parse(localStorage.getItem('id'));
-      console.log(book)
-        if(book){
-          console.log(book)
-        } else {
-          console.log("error")
-        }
-     })
+//-------------------------------- START ADD IN SHOPPING CART PAGE-------------------
+function getCart(){
+  let containerCart=document.getElementById("cart-books")
+  console.log(containerCart)
+  const cart = JSON.parse(localStorage.getItem('cart'));
+  console.log(cart)
+  if (cart) {
+    // console.log(cart.products[0].id)
+    cart.products.map ((product) =>{
+    containerCart.innerHTML+=`
+            <td>
+            <img src="${product.img}" alt="book" class="admin-book-img">
+            </td> 
+            <td>
+                  <div class="title-book">
+                    <a href="details.html?id=${product.id}" class="title-details-btn">${product.title}</a>
+                      <p>${product.author}</p>
+                  </div>
+              </td>
+              <td>
+                  <h5 class="admin-book-price">$${product.unitPrice}</h5>
+              </td>
+              <td>
+                <button id="btn-op-plus">-</button>
+                <input type="number" id="details-book-quantity" value= "${product.quantity}">
+                <button id="btn-op-plus">+</button>
+              </td>
+              <td>
+                  <p>${product.subTotal}</p>
+              </td>
+              <td>
+                <a href="#" id="btn-remove-book" onclick="deleteBookFromCart('${product.id}')">Remove</a>
+              </td>
+            </tr>`
+           })
+
+  } else {
+    console.log("error")
+  }
+}
 

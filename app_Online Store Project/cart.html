@@ -6,6 +6,8 @@
     <title>Shopping Cart</title>
     <!-- css style -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="admin.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine" />
@@ -19,15 +21,15 @@
         <i class="fas fa-book"></i>
         <a href="index.html">worldOf<span>Books</span> </a>
       </div>
-      <form class="nav-form">
+      <!-- <form class="nav-form">
         <input type="text" name="nav-search-book" id="nav-search-book" placeholder="Search by title, author..." />
         <!-- <img src="images/search.png" /> -->
-        <button id="nav-button-search-book">
+        <!-- <button id="nav-button-search-book">
           <i class="fas fa-search"></i>
         </button>
-      </form>
+      </form> --> -->
       <div class="cart-btn">
-        <a href="#" class="nav-icon">
+        <a href="cart.html" class="nav-icon">
           <i class="fas fa-cart-plus"></i>
           <span class="nav-text-icon">Shooping Cart</span>
         </a>
@@ -41,5 +43,86 @@
     </div>
   </nav>
   <!-- end of navbar -->
+
+<header class="cart-header">
+  <h1>Shopping cart</h1>
+</header>
+
+  <!-- add product in table -->
+  <section>
+    <div id="cart-container">
+      <div class="cart-table">
+        <table id="cart-books">
+          <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Sub Total</th>
+          </tr>
+          <!-- <tr>
+            <td>
+                <img src="images/book-bacgr3.webp" alt="book" class="admin-book-img">
+            </td>
+              <td>
+                  <div class="title-book">
+                    <a href="details.html?id=${key}" class="title-details-btn">Educationnkjk</a>
+                      <p>skjcklsjzsd lkjdsk</p>
+                  </div>
+              </td>
+              <td>
+                  <h5 class="admin-book-price">$20</h5>
+              </td>
+              <td>
+                <button id="btn-op-plus">+</button>
+                <input type="number" id="details-book-quantity">
+                <button id="btn-op-plus">-</button>
+              </td>
+              <td>
+                  <p>200$</p>
+              </td>
+              <td>
+                <a href="#" id="btn-remove-book" onclick="deleteBook('${key}')">Remove</a>
+              </td>
+          </tr>
+          <tr>
+            <td>
+                <img src="images/book-bacgr3.webp" alt="book" class="admin-book-img">
+            </td>
+              <td>
+                  <div class="title-book">
+                    <a href="details.html?id=${key}" class="title-details-btn">Educationnkjk</a>
+                      <p>skjcklsjzsd lkjdsk</p>
+                  </div>
+              </td>
+              <td>
+                  <h5 class="admin-book-price">$20</h5>
+              </td>
+              <td>
+                <input type="number" id="details-book-quantity">
+              </td>
+              <td>
+                  <p>200$</p>
+              </td>
+              <td>
+                <a href="#" id="btn-remove-book" onclick="deleteBook('${key}')">Remove</a>
+              </td>
+          </tr> -->
+      </table>
+    </div>
+    <div class="cart-info">
+      <p>Produse:</p>
+      <h1>Total: </h1>
+      <button id="cart-btn">Buy book</button>
+    </div>
+    <div class="cart-btn">
+    </div>
+  </div>
+    
+    
+    
+    <!-- end product -->
+</section>
+  <script src="app5.js"></script>
 </body>
 </html>

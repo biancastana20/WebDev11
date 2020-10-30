@@ -1,0 +1,61 @@
+
+.cart-header{
+    margin-top:100px;
+    width: 300px;
+    margin: auto;
+   
+}
+
+#cart-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin-top: 100px;
+    align-items: center;
+    /* border:3px solid blue; */
+} 
+
+#cart-books {
+    border-collapse: collapse;
+    margin: auto;
+    /* border: 2px solid red; */
+    width: 1050px;
+}
+
+#cart-books th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#details-book-quantity{
+    width: 60px;
+    height: 20px;
+    border: none;
+}
+.cart-info{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    padding: 10px;
+    text-align: left;  
+}
+
+#cart-btn{
+    cursor: pointer;
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 1.3vw;
+    display: inline-block;
+    transition-duration: 0.5s;
+    outline: none;
+    margin:15px;
+}
+
+[id*="op"]{
+    border: none;
+    outline: none;
+    
+}
