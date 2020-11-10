@@ -4,30 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <!-- css style -->
+<!--------------- ------------------------style css---------------------------------->
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="admin.css">
-    <!-- font awesome -->
+    <link rel="stylesheet" href="cart.css">
+<!---------------------------------- font awesome ------------------------------------>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine" />
-    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+ 
 </head>
+
 <body>
-    <!-- navbar -->
+<!------------------------------- START navbar ----------------------------------------->
   <nav class="navbar">
     <div class="navbar-center">
       <div class="nav-logo">
         <i class="fas fa-book"></i>
         <a href="index.html">worldOf<span>Books</span> </a>
       </div>
-      <!-- <form class="nav-form">
-        <input type="text" name="nav-search-book" id="nav-search-book" placeholder="Search by title, author..." />
-        <!-- <img src="images/search.png" /> -->
-        <!-- <button id="nav-button-search-book">
-          <i class="fas fa-search"></i>
-        </button>
-      </form> --> -->
       <div class="cart-btn">
         <a href="cart.html" class="nav-icon">
           <i class="fas fa-cart-plus"></i>
@@ -42,13 +35,14 @@
       </div>
     </div>
   </nav>
-  <!-- end of navbar -->
+<!------------------------------- END navbar ----------------------------------------->
 
+<!-- header -->
 <header class="cart-header">
-  <h1>Shopping cart</h1>
+  <h2>Shopping cart</h2>
 </header>
 
-  <!-- add product in table -->
+<!------------------------------ START add product in table from LS ------------------>
   <section>
     <div id="cart-container">
       <div class="cart-table">
@@ -60,69 +54,15 @@
               <th>Quantity</th>
               <th>Sub Total</th>
           </tr>
-          <!-- <tr>
-            <td>
-                <img src="images/book-bacgr3.webp" alt="book" class="admin-book-img">
-            </td>
-              <td>
-                  <div class="title-book">
-                    <a href="details.html?id=${key}" class="title-details-btn">Educationnkjk</a>
-                      <p>skjcklsjzsd lkjdsk</p>
-                  </div>
-              </td>
-              <td>
-                  <h5 class="admin-book-price">$20</h5>
-              </td>
-              <td>
-                <button id="btn-op-plus">+</button>
-                <input type="number" id="details-book-quantity">
-                <button id="btn-op-plus">-</button>
-              </td>
-              <td>
-                  <p>200$</p>
-              </td>
-              <td>
-                <a href="#" id="btn-remove-book" onclick="deleteBook('${key}')">Remove</a>
-              </td>
-          </tr>
-          <tr>
-            <td>
-                <img src="images/book-bacgr3.webp" alt="book" class="admin-book-img">
-            </td>
-              <td>
-                  <div class="title-book">
-                    <a href="details.html?id=${key}" class="title-details-btn">Educationnkjk</a>
-                      <p>skjcklsjzsd lkjdsk</p>
-                  </div>
-              </td>
-              <td>
-                  <h5 class="admin-book-price">$20</h5>
-              </td>
-              <td>
-                <input type="number" id="details-book-quantity">
-              </td>
-              <td>
-                  <p>200$</p>
-              </td>
-              <td>
-                <a href="#" id="btn-remove-book" onclick="deleteBook('${key}')">Remove</a>
-              </td>
-          </tr> -->
       </table>
     </div>
-    <div class="cart-info">
-      <p>Produse:</p>
-      <h1>Total: </h1>
-      <button id="cart-btn">Buy book</button>
-    </div>
-    <div class="cart-btn">
-    </div>
-  </div>
-    
-    
-    
-    <!-- end product -->
+    <div class="cart-info"></div>
 </section>
-  <script src="app5.js"></script>
+   <script src="cart.js"></script> 
+   <script src="app.js"></script>
+  
+  
+
+<!--------------------------------- END add product in table from LS ------------------>
 </body>
 </html>

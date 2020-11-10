@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Admin page</title>
-    <!-- style css -->
+<!--------------- ------------------------style css---------------------------------->
     <link rel="stylesheet" href="admin.css" />
-    <!-- style css for navbar-->
     <link rel="stylesheet" href="style.css" />
-    <!-- font awesome -->
+<!---------------------------------- font awesome ------------------------------------>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine" />
-    <!-- <script src="https://kit.fontawesome.com/yourcode.js"></script> -->
 </head>
 
 <body>
     <!-- <div class="loading"></div> -->
-    <!----------------------- navbar ---------------------------------------->
+<!------------------------------- START navbar ----------------------------------------->
     <nav class="navbar">
         <div class="navbar-center">
             <div class="nav-logo">
@@ -33,9 +29,9 @@
             </div>
         </div>
     </nav>
-    <!-- --------------------------------end of navbar --------------------------------------->
+<!-- --------------------------------END navbar ---------------------------------------->
     
-    <!-- ---------------------------start peoduct management container -------------------------- -->
+<!-- --------------------------------------- START product management container ----------------------->
     <div id="product-management-container">
         <header id="product-management" >
             <h2> Product Management</h2>
@@ -44,8 +40,7 @@
                     <i class="fas fa-plus"></i> ADD A NEW BOOK </button>
             </div>
         </header>
-        
-    <!-- add product in table -->
+<!--------START add products in table from JSON (after push add new book will be hidden)------->
         <section>
             <table id="table-books">
                 <tr>
@@ -55,13 +50,11 @@
                     <th>Quantity</th>
                 </tr>
             </table>
-            <!-- end product -->
         </section>
     </div>
-    
+<!--------------------------- END products management container ------------------------->
 
-    <!-- -------------------------------end product management container ----------------------------------------->
-
+<!-- -------------------------START section add new book in table (hidden initially) -- -->
     <div id="add-new-book-container">
          <header id="add-new-book">
             <h2> Add a new book</h2>
@@ -108,9 +101,10 @@
             <!-- <br> -->
         </form>
 </div>
-    
-  
-    <script src="app5.js"></script>
+<!-- -------------------------END section add new book in table ------------------------ -->
+
+<!-- ----------------------------------------- END product management container ----------------------------->
+<script src="app.js"></script>
 </body>
 
 </html>

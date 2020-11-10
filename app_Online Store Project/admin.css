@@ -1,4 +1,4 @@
-/* -------------------start HEADER PRODUCT MANAGEMENT-------------------------- */
+/* -------------------START product management header-------------------------*/
 #product-management {
     display: flex;
     justify-content: space-evenly;
@@ -24,9 +24,9 @@
     background-color: #0b16aa;
     color: white;
 }
-/* -------------------end HEADER PRODUCT MANAGEMENT-------------------------- */
+/* -------------------END product management header-------------------------- */
 
-/* -----------------------start TABLE WITH BOOKS  ---------------*/
+/* -------------------START style TABLE WITH BOOKS  ---------------------------------*/
 #table-books {
     border-collapse: collapse;
     width: 80%;
@@ -75,15 +75,14 @@ table span {
     transition-duration: 0.5s;
 }
 
-/* -----------------------end TABLE WITH BOOKS ---------------*/
+/* -----------------------END style TABLE WITH BOOKS ---------------------------*/
 
 
-
-/* --------------------start ADD NEW BOOK container--------------- */
+/* --------------------START style ADD NEW BOOK container----------------------- */
 #add-new-book-container{
     visibility: hidden;
 }
-/* ------- -----------header add new book ------------------------------ */
+/* ------- -----------header add new book -------------------- */
 #add-new-book {
     display: flex;
     justify-content: space-evenly;
@@ -92,9 +91,8 @@ table span {
     align-items: center;
 }
 
-/* ------------------start form add new book--------------------------- */
+/* ------------------START style form add new book----------------- */
 #form-add-book {
-    /* border:2px solid red; */
     padding: 30px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 50%; 
@@ -109,17 +107,16 @@ table span {
     padding: 7px;
 }
 input[type=text], input[type=number], textarea {
-    /* width: 100%; */
     width: 80%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
-  }
+}
 
 label {
     padding: 12px 12px 12px 0;
     display: inline-block;
     /* border: 2px solid yellow; */
-  }
-/* --------------------start ADD NEW BOOK container--------------- */
+}
+/* ---------------------------- END ADD NEW BOOK container --------------------- */
