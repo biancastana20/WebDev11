@@ -1,0 +1,460 @@
+/* ------------------------reset for all the elements-------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  /* elemnts will not gone get bigger if I have the value of the border-box */
+  box-sizing: border-box;
+
+}
+
+/* template */
+:root {
+  --main-color: #0275d8;
+  --main-fontfamily: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  color: black;
+  font-family: var(--main-fontfamily);
+
+  /* width: 1600px; */
+}
+
+.loader {
+  display: none;
+  position: absolute;
+  top: -250px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: #eceaec;
+  background-image: url('images/svg.gif');
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: center;
+  opacity: 0.4;
+  z-index: 1000000;
+  filter: alpha(opacity=40)
+}
+
+/* ----------------------------------start navbar--------------------------- */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  /* width: 100%; */
+  /* background: #d3c09a; */
+  padding: 15px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: black;
+}
+
+.navbar-center {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 2px;
+}
+
+/* .cart-btn {
+     margin-left: 260px;
+ } */
+
+.nav-logo {
+  font-size: 2vw;
+  /* text-shadow: -3px -3px gray; */
+  letter-spacing: 5px;
+  color: white;
+}
+
+.nav-logo a {
+  text-decoration: none;
+  color: white;
+  /* font-size: 2vw; */
+}
+
+.nav-logo span {
+  color: var(--main-color);
+  /* font-size: 2vw; */
+}
+
+.nav-form {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+}
+
+.nav-form input {
+  width: 200px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  border-color: var(--main-color);
+  cursor: pointer;
+  outline: none;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 10px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav-form input[type=text]:focus {
+  width: 100%;
+}
+
+#nav-button-search-book {
+  width: 30px;
+  border-color: var(--main-color);
+  outline: none;
+  cursor: pointer;
+}
+
+.nav-icon,
+.admin-icon {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 7px;
+  outline: none;
+  font-size: 0.8vw;
+  display: inline-block;
+  transition-duration: 0.5s;
+  /* border-top-right-radius: 70px; */
+}
+
+.admin-icon:hover {
+  background-color: #0b16aa;
+  color: white;
+}
+
+.nav-icon:hover {
+  background-color: #0b16aa;
+  color: white;
+}
+
+/* -------------------------------end nav bar----------------------------------- */
+
+/* -------------------------------start hearder-------------------------------- */
+.banner-info {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+}
+
+.banner-imag {
+  max-width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.banner-text {
+  position: absolute;
+  top: 410px;
+  /* text-align: center; */
+  margin-left: 17%;
+  color: black;
+  width: 100%;
+  /* font-family: "Tangerine", serif; */
+  font-size: 2vw;
+  text-shadow: 10px 10px 10px gray;
+  display: block;
+  opacity: 0.8;
+}
+
+.banner-author {
+  font-size: 1vw;
+  text-shadow: 5px 5px 5px #aaa;
+}
+
+/* ---------------------------------end header--------------------------------- */
+
+/* ------------------------------------books----------------------------------- */
+
+.section-title h2 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 80px;
+  letter-spacing: 30px;
+  text-shadow: -5px -5px black;
+  color: var(--main-color);
+  margin-top: 30px;
+}
+
+
+.books {
+  padding: 50px 0;
+
+}
+
+.book {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* border: 2px solid red; */
+  border-radius: 5px;
+}
+
+/* responsive*/
+.books-center {
+  max-width: 1400px;
+  display: grid;
+  /* repeate how many column I want */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 25px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+/* .book-img:hover {
+  transform: scale(1.2);
+} */
+
+.book-img {
+  display: block;
+  width: 200px;
+  height: auto;
+  margin: auto;
+  margin-top: 10px;
+}
+
+
+.book h4 {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.book p {
+  text-align: center;
+  font-size: 12px;
+  /* padding: 10px; */
+}
+
+.book h3 {
+  color: green;
+  font-size: 17px;
+  padding: 10px;
+}
+
+.book-details-price {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px;
+}
+
+.book-details-btn {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 7px;
+  outline: none;
+  font-size: 15px;
+  display: block;
+  transition-duration: 0.5s;
+}
+
+.book-details-btn:hover {
+  background-color: #0b16aa;
+  color: white;
+}
+
+.book:hover {
+  transform: scale(1.1);
+}
+
+/* ----------------------------end of books---------------------------------*/
+/*------------------------- ------start footer -----------------------------*/
+
+.horisontal-line {
+  width: 1500px;
+  margin: auto;
+  padding: 2px;
+  background-color: black;
+}
+
+.footer-container {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-announcements {
+  background-color: white;
+  /* background-color: gray; */
+}
+
+.footer-message {
+  margin-top: 30px;
+  background-color: black;
+  color: white;
+  /* color: var(--main-color); */
+  width: 60%;
+  margin: auto;
+  padding: 25px;
+  align-items: center;
+
+}
+
+
+/* toate clasele din div care contin fab  */
+.footer-social-icons [class*=fab] {
+  color: var(--main-color);
+  font-size: 30px;
+  /* padding: 10px; */
+}
+
+
+.footer-social-icons {
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+
+
+/*------------------------- ------end footer -----------------------------*/
+
+/* RESPONSIVE */
+/* usualy used for phones */
+@media(max-width:500px) {
+
+  .navbar-center {
+    flex-direction: column;
+  }
+
+  .nav-logo {
+    font-size: 6vw;
+  }
+
+  .nav-form {
+    width: 40vw;
+    height: 7vw;
+  }
+
+  .nav-form input {
+    width: 50vw;
+    padding: 1vw;
+    font-size: 2vw;
+    align-items: center;
+  }
+
+
+  #nav-button-search-book {
+    height: 3vw;
+    padding: 2.9vw;
+    font-size: 1vw;
+    margin: auto;
+  }
+
+  .nav-icon,
+  .admin-icon {
+    padding: 1vw;
+    font-size: 2vw;
+  }
+
+  .section-title h2 {
+    font-size: 7vw;
+  }
+
+  /*------------------------- ------start footer -----------------------------*/
+
+  .horisontal-line {
+    width: 100vw;
+  }
+
+  .footer-message {
+    font-size: 2vw;
+
+  }
+
+  .footer-social-icons {
+    width: 100vw;
+  }
+
+}
+
+/* usualy used for tablet */
+@media(min-width: 501px) and (max-width: 768px) {
+  .navbar-center {
+    flex-direction: column;
+  }
+
+  .nav-logo {
+    font-size: 6vw;
+  }
+
+  .nav-form {
+    width: 40vw;
+    height: 7vw;
+  }
+
+  .nav-form input {
+    width: 50vw;
+    padding: 1vw;
+    font-size: 2vw;
+    align-items: center;
+  }
+
+
+  #nav-button-search-book {
+    height: 3vw;
+    padding: 2.9vw;
+    font-size: 1vw;
+    margin: auto;
+  }
+
+  .nav-icon,
+  .admin-icon {
+    padding: 1vw;
+    font-size: 2vw;
+  }
+
+  .section-title h2 {
+    font-size: 7vw;
+  }
+
+  /*------------------------- ------start footer -----------------------------*/
+
+  .horisontal-line {
+    width: 100vw;
+  }
+
+  .footer-message {
+    font-size: 2vw;
+
+  }
+
+  .footer-social-icons {
+    width: 100vw;
+  }
+}
+
+/* laptop */
+ @media(min-width: 769px) and (max-width: 1024px) {
+    
+  .footer-message {
+    font-size: 2vw;
+
+  }
+
+  .footer-social-icons {
+    width: 100vw;
+  }
+} 

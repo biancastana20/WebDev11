@@ -1,0 +1,148 @@
+/* -------------------------START style book details -------------------------*/
+
+.details-hidden-banner {
+  background-color: #0275d8;
+  color: white;
+  text-align: center;
+  height: 40px;
+  padding: 10px;
+  opacity: 0.5;
+  visibility: hidden;
+}
+
+.details-book-container {
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+
+}
+
+.details-book-img {
+  max-width: 30%;
+  height: 400px;
+  margin: auto;
+
+}
+
+/* al 3-lea element al divului details.. */
+.details-book-info>p:first-of-type {
+  color: green;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.details-book-info input {
+  width: 50px;
+}
+
+.details-book-info>h3 {
+  margin-top: 30px;
+}
+
+.details-book-info>h5 {
+  font-style: italic;
+  position: relative;
+}
+
+.details-book-description {
+  margin-top: 40px;
+  padding: 10px;
+  width: 80%;
+}
+
+/*  > doar p directi ai divului */
+.details-book-description>p {
+  text-align: justify;
+  font-size: 12px;
+}
+
+.btn-add-to-cart {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #2081e2;
+  padding: 15px;
+  border-radius: 7px;
+  outline: none;
+  font-size: 15px;
+  margin-top: 30px;
+  width: 150px;
+  position: absolute;
+  right: 600px;
+  top: 190px;
+}
+
+.footer-container {
+  bottom: 0px;
+
+}
+
+
+/* RESPONSIVE */
+/* usualy used for phones */
+@media(max-width:500px) {
+
+  /* -------------------------START style book details -------------------------*/
+
+  .details-book-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .details-book-img {
+    max-width: 90vw;
+    height: 80vw;
+  }
+
+  .details-book-description {
+    padding: 5vw;
+    margin: auto;
+    width: 90vw;
+  }
+
+
+  .btn-add-to-cart {
+    margin: 15vw;
+    right: 17vw;
+    top: 250vw;
+  }
+
+}
+
+/* usualy used for tablet */
+@media(min-width: 501px) and (max-width: 768px) {
+  .details-book-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .details-book-img {
+    max-width: 90vw;
+    height: 80vw;
+  }
+
+  .details-book-description {
+    padding: 5vw;
+    margin: auto;
+    width: 90vw;
+  }
+
+  .btn-add-to-cart {
+    margin: 14vw;
+    right: 26vw;
+    top: 153vw;
+  }
+}
+
+/* laptop */
+@media(min-width: 769px) and (max-width: 1024px) {
+  .btn-add-to-cart {
+    margin: 15vw;
+    right: 17vw;
+    top: 7vw;
+  }
+
+}

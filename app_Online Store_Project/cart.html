@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <!--------------- ------------------------style css---------------------------------->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="cart.css">
+  <!---------------------------------- font awesome ------------------------------------>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+</head>
+
+<body onload="loaderFunc()">
+  <div class="loader"></div>
+  <!------------------------------- START navbar ----------------------------------------->
+  <nav class="navbar">
+    <div class="navbar-center">
+      <div class="nav-logo">
+        <i class="fas fa-book"></i>
+        <a href="index.html">worldOf<span>Books</span> </a>
+      </div>
+      <div class="cart-btn">
+        <a href="cart.html" class="nav-icon">
+          <i class="fas fa-cart-plus"></i>
+          <span class="nav-text-icon">Shooping Cart</span>
+        </a>
+      </div>
+      <div class="admin-btn">
+        <a href="admin.html" class="admin-icon">
+          <i class="fas fa-user-lock"></i>
+          <span class="nav-text-icon">Admin</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!------------------------------- END navbar ----------------------------------------->
+
+  <!-- header -->
+  <header class="cart-header">
+    <h2>Shopping cart</h2>
+  </header>
+
+  <!------------------------------ START add product in table from LS ------------------>
+  <section>
+    <div id="cart-container">
+      <div class="cart-table">
+        <table id="cart-books">
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sub Total</th>
+          </tr>
+        </table>
+      </div>
+      <div class="cart-info"></div>
+  </section>
+  <script src="cart.js"></script>
+  <script src="app.js"></script>
+
+
+
+  <!--------------------------------- END add product in table from LS ------------------>
+</body>
+
+</html>

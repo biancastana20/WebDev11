@@ -1,0 +1,232 @@
+/* ----------------HEADER---------------------- */
+.cart-header {
+    padding: 30px;
+    display: inline-block;
+    margin: 50px 300px;
+}
+
+/* ---------------CART CONTAINER-------------- */
+#cart-container {
+    display: flex;
+    padding: 10px;
+    margin: 0px 150px 0px;
+}
+
+/* -------------TABLE CART------------------ */
+#cart-books {
+    border-collapse: collapse;
+    width: 900px;
+    position: relative;
+}
+
+#cart-books th,
+td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+[id*=subtotal] {
+    font-weight: bold;
+}
+
+.title-book>a {
+    text-decoration: none;
+}
+
+.title-book>p {
+    font-style: italic;
+}
+
+.details-book-quantity {
+    width: 25px;
+    height: 20px;
+    border: none;
+}
+
+[id*="op"] {
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+/* -----------INFO CART (total)----------- */
+.cart-info {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    padding: 30px;
+    text-align: right;
+    position: absolute;
+    right: 250px;
+}
+
+#cart-btn {
+    cursor: pointer;
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 1vw;
+    display: inline-block;
+    transition-duration: 0.5s;
+    outline: none;
+    margin: 15px;
+}
+
+/* RESPONSIVE */
+/* usualy used for phones */
+@media(max-width:500px) {
+    .cart-header {
+        margin-left: 3vw;
+         width: 90vw; 
+    }
+
+    #cart-container {
+        flex-direction: column;
+        margin-left: 4vw;
+        font-size: 1vw;
+    }
+
+    #cart-books {
+        font-size: 1vw;
+        width: 20vw;
+    }
+
+    #cart-books th,
+    td {
+        font-size: 2vw;
+    }
+
+    .details-book-quantity {
+        font-size: 2vw;
+    }
+
+    [id*=subtotal] {
+        font-size: 2vw;
+    }
+
+    .admin-book-price {
+        font-size: 2vw;
+    }
+
+    [id*="op"] {
+        font-size: 2vw;
+    }
+
+    .title-book>a {
+        font-size: 2vw;
+    }
+
+    .title-book>p {
+        font-size: 2vw;
+        text-decoration: none;
+    }
+
+    .cart-info {
+        font-size:2vw;
+        text-align: center;
+        top: 160vw;
+        right: 20vw;
+        width: 60vw;
+    }
+
+    #cart-btn {
+        font-size: 2.5vw;
+    }
+
+    #btn-remove-book {
+        font-size: 1.5vw;
+         padding: 1vw; 
+    }
+}
+
+/* usualy used for tablet */
+@media(min-width: 501px) and (max-width: 768px) {
+
+    .cart-header {
+        margin-left: 5vw;
+        width: 100vw;
+    }
+
+    #cart-container {
+        flex-direction: column;
+        margin-left: 5vw;
+        font-size: 2vw;
+        width: 30px;
+    }
+
+    #cart-books {
+        font-size: 1.5vw;
+        width: 25vw;
+    }
+
+    #cart-books th,
+    td {
+        font-size: 3vw;
+    }
+
+    .details-book-quantity {
+        font-size: 2vw;
+    }
+
+    [id*=subtotal] {
+        font-size: 2vw;
+    }
+
+    .admin-book-price {
+        font-size: 2vw;
+    }
+
+    [id*="op"] {
+        font-size: 2vw;
+    }
+
+    .title-book>a {
+        font-size: 2vw;
+    }
+
+    .title-book>p {
+        font-size: 2vw;
+        text-decoration: none;
+    }
+
+    .cart-info {
+        text-align: center;
+        top: 120vw;
+        right: 25vw;
+        width: 60vw;
+    }
+
+    #cart-btn {
+        font-size: 2.5vw;
+    }
+
+    #btn-remove-book {
+        font-size: 1.5vw;
+        padding: 1vw;
+    }
+}
+
+/* laptop */
+@media(min-width: 769px) and (max-width: 1024px) {
+
+    .cart-header {
+        margin-left: 3vw;
+        width: 100vw;
+    }
+
+    #cart-container {
+        flex-direction: column;
+        margin-left: 1vw;
+        font-size: 2vw;
+        width: 30px;
+    }
+    .cart-info {
+        text-align: center;
+        top: 65vw;
+        right: 20vw;
+        width: 60vw;
+    }
+
+}
